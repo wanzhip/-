@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    :root{
+      --bg-color:#000;
+    }
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Open Sans', sans-serif;
+    }
+    section{
+      position: relative;
+      min-height: 100vh;
+      background: var(--bg-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /* border: 2px solid #f40; */
+    }
+    section h2{
+      color: #fff;
+      font-size: 10em;
+      cursor: pointer;
+    }
+    .light{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 5px solid #fff;
+      background: radial-gradient(circle  at var(--a) var(--b), transparent 10%, rgba(0,0,0,1) 20%);
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <h2>特等奖</h2>
+  </section>
+  <div class="light"></div>
+  <script>
+    const pos = document.documentElement
+    pos.addEventListener('mousemove', e=>{
+      console.log(e.clientX,e.clientY);
+      pos.style.setProperty('--a', e.clientX + 'px')
+      pos.style.setProperty('--b', e.clientY + 'px')
+    })
+  </script>
+
+  <script>
+    function deepClone(target){
+      // 判断是非为对象
+        // 是否为数组
+        // 是否为null
+        // 是否是正则
+        // 否则普通对象
+      // 不是对象直接赋值
+    }
+  </script>
+</body>
+</html>
